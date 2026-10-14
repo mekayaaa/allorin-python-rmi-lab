@@ -10,7 +10,6 @@ from product import Product
 HOST = os.getenv("PYRO_HOST", "127.0.0.1")
 PORT = int(os.getenv("PYRO_PORT", "9000"))
 
-
 @expose
 class ProductImpl(Product):
 
@@ -27,7 +26,6 @@ class ProductImpl(Product):
 
     def getPrice(self):
         return self.price
-
 
 def main():
     try:
@@ -53,7 +51,6 @@ def main():
         print(f"Server error: {exc}")
     except Exception as exc:
         print(f"Server error: {exc}")
-
 
 if __name__ == "__main__":
     main()
